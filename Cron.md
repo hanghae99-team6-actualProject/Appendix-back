@@ -1,6 +1,5 @@
 [Readme 돌아가기](https://github.com/hanghae99-team6-actualProject/backend)  
 
-- [Cron](https://github.com/hanghae99-team6-actualProject/Appendix-back/blob/main/Cron.md)  
 <img width="386" alt="스크린샷 2021-12-03 오전 8 06 15" src="https://user-images.githubusercontent.com/54808299/144517227-b8b23019-4669-4ea5-8c26-425c25fe2eea.png">
 
 ### 문제 인식
