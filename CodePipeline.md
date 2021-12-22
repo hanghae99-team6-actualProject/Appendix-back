@@ -21,15 +21,22 @@ Swap Memory를 사용하여 하드디스크의 디스크를 메모리로 사용�
 당시 로드밸런싱에 대한 이해도가 적었기에 남는 서버의 가용 공간을 사용할 방법을 찾지 못하여 비용 낭비가 크다고 판단하였습니다.
 
 ## Travis CI 
-![travis-ci](https://user-images.githubusercontent.com/42149645/146668486-52843d32-0d5c-46e2-8c44-b267b7b75151.jpg)  
+
+<img src="https://user-images.githubusercontent.com/42149645/146668486-52843d32-0d5c-46e2-8c44-b267b7b75151.jpg" alt="travis-ci" width="200" height="auto"/>  
+
 Travis CI를 사용하여 CI/CD를 구축하였습니다. 하지만 개인용 레포지토리 이상의 팀 프로젝트에서는 비용이 꽤 발생함을 확인 후 변경하였습니다.  
 
 ## Github Actions
-![img](https://user-images.githubusercontent.com/42149645/146668561-a36bac5b-a9c9-404b-8562-850466e26c99.png)  
+
+<img src="https://user-images.githubusercontent.com/42149645/146668561-a36bac5b-a9c9-404b-8562-850466e26c99.png" alt="img" width="200" height="auto"/>  
+
 이후 Github Actions를 사용하였습니다. 그러나 젠킨스를 실사용하다가 사용하게 되니 서비스가 약간 부족해보이는 느낌도 들었으며 파이프라인의 Build 단계에서 S3를 사용하는 것을 깨닫고 아예 아키텍쳐를 AWS로 통일하자는 생각이 들게 되었습니다.
 
 ## AWS CodePipeline
-![44444](https://user-images.githubusercontent.com/42149645/146668655-1a1d592d-2c12-4c0f-8050-8a69c24dc5d2.png)  
+
+<img src="https://user-images.githubusercontent.com/42149645/146668655-1a1d592d-2c12-4c0f-8050-8a69c24dc5d2.png" alt="img" width="200" height="auto"/>  
+
+
 최종 CI/CD 툴로써 AWS CodePipeline을 사용하게 되었습니다.  
 우선 활성 파이프라인 1개는 무료로 제공되기 때문에 비용 측면에서 낫고 AWS이기 때문에 서비스도 나쁘지 않을 것이라고 판단하였습니다.   
 실제로 AWS CodePipeline은 CodeBuild에서의 비용을 제외하고 무료로 사용할 수 있었으며 이후의 아키텍쳐간의 연결과 Cloud Watch를 통한 로그 확인 등에서 젠킨스만큼의 훌륭한 서비스도 제공해주어 간편한 사용이 가능하였습니다.
